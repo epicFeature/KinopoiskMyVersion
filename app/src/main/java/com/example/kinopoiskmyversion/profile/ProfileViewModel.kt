@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion
+package com.example.kinopoiskmyversion.profile
 
 import androidx.lifecycle.ViewModel
 

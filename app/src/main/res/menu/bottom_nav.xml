@@ -6,17 +6,17 @@
         android:layout_height="wrap_content"
         android:title="Search"
         android:icon="@drawable/search_icon"
-        android:id="@+id/searchNavigationButton"/>
+        android:id="@+id/searchNavButton"/>
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Profile"
         android:icon="@drawable/person_icon"
-        android:id="@+id/myProfileNavigationButton"/>
+        android:id="@+id/profileNavButton"/>
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Movie"
         android:icon="@drawable/film_icon"
-        android:id="@+id/currentMovieNavigationButton"/>
+        android:id="@+id/currentMovieNavButton"/>
 </menu>

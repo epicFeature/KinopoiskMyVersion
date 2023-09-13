@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion.ui.main
+package com.example.kinopoiskmyversion.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,25 +8,20 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.kinopoiskmyversion.R
 import com.example.kinopoiskmyversion.databinding.FragmentMainBinding
+import com.example.kinopoiskmyversion.databinding.FragmentProfileBinding
 
-class MainFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private var _binding: FragmentMainBinding? = null
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-    /*private lateinit var viewModel: MainViewModel*/
-
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        Use the ViewModel
-    }*/
+    /*private lateinit var viewModel: ProfileViewModel*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,17 +29,12 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.profileNavButton -> {
-                    findNavController().navigate(R.id.action_mainFragment_to_profileFragment)
-                    true
+                R.id.searchNavButton -> findNavController().navigate(R.id.action_profileFragment_to_mainFragment)
+                R.id.currentMovieNavButton -> findNavController().navigate(R.id.action_profileFragment_to_movieBasicFragment)
+                else -> {
                 }
-                R.id.currentMovieNavButton -> {
-                    findNavController().navigate(R.id.action_mainFragment_to_movieBasicFragment)
-                    true
-                }
-                else -> false
             }
-
+            true
         }
     }
 
@@ -52,4 +42,11 @@ class MainFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        // Use the ViewModel
+    }*/
+
 }
