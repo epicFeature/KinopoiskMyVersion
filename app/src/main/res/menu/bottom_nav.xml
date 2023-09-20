@@ -5,18 +5,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Search"
+        android:enabled="true"
         android:icon="@drawable/search_icon"
         android:id="@+id/searchNavButton"/>
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Profile"
+        android:enabled="true"
         android:icon="@drawable/person_icon"
         android:id="@+id/profileNavButton"/>
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Movie"
-        android:icon="@drawable/film_icon"
+        android:enabled="true"
+        android:icon="@drawable/cinema_icon"
         android:id="@+id/currentMovieNavButton"/>
 </menu>

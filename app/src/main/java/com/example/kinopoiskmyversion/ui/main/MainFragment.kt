@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView.OnQueryTextListener
 import androidx.navigation.fragment.findNavController
 import com.example.kinopoiskmyversion.R
 import com.example.kinopoiskmyversion.databinding.FragmentMainBinding
@@ -32,6 +33,20 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.search.setOnQueryTextListener(object: OnQueryTextListener{
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return true
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                return true
+            }
+
+        })
+
+
+
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.profileNavButton -> {
@@ -44,7 +59,6 @@ class MainFragment : Fragment() {
                 }
                 else -> false
             }
-
         }
     }
 
