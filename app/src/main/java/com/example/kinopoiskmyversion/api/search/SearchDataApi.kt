@@ -8,14 +8,14 @@ import retrofit2.http.Query
 interface SearchDataApi {
 
     @Headers(
-        "Accept:application/json",
+        "Accept: application/json",
         "Content-type: application/json",
-        "X-API-KEY: J0M94EQ-MAGMZ2N-JEYB7A1-0J2QJ10"//куда писать токен?
+        "X-API-KEY: J0M94EQ-MAGMZ2N-JEYB7A1-0J2QJ10"
     )
     @GET(
-        "?page=1&limit=10&query="
+        "/v1.2/movie/search?page=1&limit=10"
     )//гет запрос для поиска текста, после query должен быть переделанный текст
-    suspend fun getSearchData(@Query("q")): List<SearchData> //тут где-то должен подключаться recycleView
+    fun getSearchData(@Query("query") searchText: String): Call<SearchData>//тут где-то должен подключаться recycleView
     //поч саспенд?
 
 }

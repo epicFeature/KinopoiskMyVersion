@@ -21,15 +21,14 @@
         android:id="@+id/title_ru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="16dp"
+        android:layout_margin="16dp"
         android:padding="5dp"
         android:text="Убийства в одном здании"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/poster"
-        app:layout_constraintEnd_toStartOf="@+id/rating"
         app:layout_constraintStart_toEndOf="@+id/poster"
         app:layout_constraintTop_toTopOf="@+id/poster"
         app:layout_constraintVertical_bias="0.23
@@ -40,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="5dp"
+        android:textSize="12sp"
         android:text="2021"
         app:layout_constraintStart_toEndOf="@+id/title_en"
         app:layout_constraintTop_toBottomOf="@+id/title_ru" />
@@ -49,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="5dp"
+        android:textSize="12sp"
         android:text="Only Murders in the Building"
         app:layout_constraintStart_toStartOf="@+id/title_ru"
         app:layout_constraintTop_toBottomOf="@+id/title_ru" />
@@ -57,13 +58,12 @@
         android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7.2"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginHorizontal="16dp"
         android:padding="5dp"
-        android:layout_margin="16dp"
+        android:text="7.2"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/poster"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/poster" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
