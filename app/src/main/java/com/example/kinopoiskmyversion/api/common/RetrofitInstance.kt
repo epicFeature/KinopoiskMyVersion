@@ -1,6 +1,6 @@
 package com.example.kinopoiskmyversion.api.common
 
-import com.example.kinopoiskmyversion.api.moviefull.MovieDataApi
+import com.example.kinopoiskmyversion.api.moviefull.CinemaDataApi
 import com.example.kinopoiskmyversion.api.search.SearchDataApi
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -18,5 +18,5 @@ object RetrofitInstance {
 
     val getsearchMovieDataApi: SearchDataApi = retrofit.create(SearchDataApi::class.java)
     // тут точно так же будут переменные для др экранов
-    val getMovieDataApi: MovieDataApi = retrofit.create(MovieDataApi::class.java)
+    val getCinemaDataApi: CinemaDataApi = retrofit.create(CinemaDataApi::class.java)
 }
