@@ -1,5 +1,6 @@
 package com.example.kinopoiskmyversion.movieinfo
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,8 +33,25 @@ class MovieBasicFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //save to database buttons
+        binding.bookmarkIcon.setOnClickListener {
+            //set on/off mode
+            //check
+            //change colour
+            //add info to database
+        }
+        binding.seenIcon.setOnClickListener {
+            //set on/off mode
+            //check
+            //change colour
+            //add info to database
+        }
+
+        //bottom nav
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.profileNavButton -> findNavController().navigate(R.id.action_movieBasicFragment_to_profileFragment)
@@ -51,7 +69,7 @@ class MovieBasicFragment : Fragment() {
     }
 
 
-    }
+}
 
 
 
