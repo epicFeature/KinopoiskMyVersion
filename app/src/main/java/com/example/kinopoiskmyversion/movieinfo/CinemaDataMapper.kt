@@ -15,7 +15,7 @@ class CinemaDataMapper(
 ) {
 
     fun toMovieBasicFragment(cinemaData: CinemaData){
-        val currentType = cinemaData.type.toEnum<CinemaType>() ?: CinemaType.UNKNOWN
+        val currentType = cinemaData.type.replace("-","_").toEnum<CinemaType>() ?: CinemaType.UNKNOWN
         //основная часть mapping
         basicMapping(cinemaData)
         when (currentType.seasons) {
@@ -29,8 +29,8 @@ class CinemaDataMapper(
         with(binding) {
             titleRu.text = cinemaData.name
             titleEng.text = cinemaData.alternativeName
-            rating.text = cinemaData.rating.toString()
-            genres.text = cinemaData.genres.joinToString(", ")
+            rating.text = cinemaData.rating?.kp.toString()
+            genresMapping(cinemaData)
             discription.text = cinemaData.description
         }
         Glide
@@ -40,6 +40,8 @@ class CinemaDataMapper(
             .placeholder(R.drawable.background_gradient)
             .into(binding.poster)
     }
+
+
 
 //кусок с сезонами и эпизодами надо делать через кастом вью, пока упрощенный вариант
 //тут можно и лучше сделать, через использование нескольких constraint, но пока проверим на работоспособность простым путем
@@ -51,7 +53,7 @@ class CinemaDataMapper(
             episodesText.isVisible = true
             episodesNumber.isVisible = true
             episodesCount(cinemaData)
-            airedData.text = cinemaData.releaseYears?.joinToString { " - " } ?: "пока не известно"
+            airingMapping(cinemaData)
         }
     }
 
@@ -89,4 +91,17 @@ class CinemaDataMapper(
         binding.episodesNumber.text = episodesNumber.sumOf { it }.toString()
     }
 
+    private fun genresMapping(cinemaData: CinemaData) {
+        val genreNames = mutableListOf<String>()
+        cinemaData.genres.forEach {
+            genreNames.add(it.name)
+        }
+        binding.genres.text = genreNames.joinToString(", ")
+    }
+
+    private fun airingMapping (cinemaData: CinemaData) {
+        val airingPeriods = mutableListOf<String>()
+        cinemaData.releaseYears?.forEach { airingPeriods.add("${it.start}-${it.end}") }
+        binding.airedData.text = airingPeriods.joinToString ( ", " ) ?: "пока не известно"
+    }
 }

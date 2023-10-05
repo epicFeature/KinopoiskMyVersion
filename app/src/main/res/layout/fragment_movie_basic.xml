@@ -193,7 +193,6 @@
                         android:padding="5dp"
                         android:text="комедия, детектив, драма"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/discription"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/aired_data" />
@@ -206,7 +205,8 @@
                         android:text="Трое жителей высотного дома на Манхэттене обожают криминальные рассказы и неожиданно оказываются втянуты в расследование убийства, произошедшего прямо у них под носом."
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/genres"/>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
