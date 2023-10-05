@@ -20,6 +20,7 @@ class MovieBasicFragment : Fragment() {
 
     private lateinit var cinemaId: String
     private lateinit var service: GetCinemaService
+    private lateinit var cinemaDataMapper: CinemaDataMapper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,26 +30,21 @@ class MovieBasicFragment : Fragment() {
         arguments?.let {
             cinemaId = it.getString(KEY_MOVIE_ID)!!
         }
-        service = GetCinemaService(cinemaId)
+        cinemaDataMapper = CinemaDataMapper(binding,this)
+        service = GetCinemaService {cinemaDataMapper.toMovieBasicFragment(it)}
         return binding.root
     }
 
     @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        //save to database buttons
+        service.getCinemaData(cinemaId)
+            //save to database buttons
         binding.bookmarkIcon.setOnClickListener {
-            //set on/off mode
-            //check
-            //change colour
-            //add info to database
+            //set on/off mode //check //change colour //add info to database
         }
         binding.seenIcon.setOnClickListener {
-            //set on/off mode
-            //check
-            //change colour
-            //add info to database
+            //same
         }
 
         //bottom nav

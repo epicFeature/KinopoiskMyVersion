@@ -37,16 +37,16 @@ class SearchRecycleViewAdapter(
         val context = holder.itemView.context
 
         with(holder.binding) {
-            titleRu.text = searchMovieData.name
-            titleEn.text = searchMovieData.alternativeName
-            rating.text = searchMovieData.rating.toString()
-            yearOfProduction.text = searchMovieData.year.toString()
+            titleRuRecycler.text = searchMovieData.name
+            titleEnRecycler.text = searchMovieData.alternativeName
+            ratingRecycler.text = searchMovieData.rating.toString()
+            yearOfProductionRecycler.text = searchMovieData.year.toString()
             searchMovieData.poster.let {
                 Glide.with(context)
                 .load(searchMovieData.poster)
                 .centerCrop()
                 .placeholder(R.drawable.background_gradient)
-                .into(poster)
+                .into(posterRecycler)
             }
             root.setOnClickListener{
                 onClick(searchMovieData)
