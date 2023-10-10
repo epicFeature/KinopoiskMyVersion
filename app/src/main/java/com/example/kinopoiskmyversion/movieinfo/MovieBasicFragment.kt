@@ -40,7 +40,7 @@ class MovieBasicFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         service.getCinemaData(cinemaId)
             //save to database buttons
-        binding.bookmarkIcon.setOnClickListener {
+        binding.seeLaterIcon.setOnClickListener {
             //set on/off mode //check //change colour //add info to database
         }
         binding.seenIcon.setOnClickListener {

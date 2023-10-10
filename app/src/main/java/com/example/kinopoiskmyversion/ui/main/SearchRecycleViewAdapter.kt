@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.kinopoiskmyversion.R
 import com.example.kinopoiskmyversion.api.search.Data
-import com.example.kinopoiskmyversion.databinding.SearchItemForRecycleViewBinding
+import com.example.kinopoiskmyversion.databinding.ItemForRecycleViewBinding
 
 class SearchRecycleViewAdapter(
     val onClick: (Data) -> Unit
@@ -23,7 +23,7 @@ class SearchRecycleViewAdapter(
         viewType: Int
     ): MovieViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = SearchItemForRecycleViewBinding.inflate(inflater, parent, false)
+        val binding = ItemForRecycleViewBinding.inflate(inflater, parent, false)
         return MovieViewHolder(binding)
     }
 
@@ -56,7 +56,7 @@ class SearchRecycleViewAdapter(
     }
 
     class MovieViewHolder(
-        val binding: SearchItemForRecycleViewBinding
+        val binding: ItemForRecycleViewBinding
     ) : RecyclerView.ViewHolder(binding.root)
 
 }
