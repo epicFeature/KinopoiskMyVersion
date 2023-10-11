@@ -3,14 +3,17 @@ package com.example.kinopoiskmyversion.profile
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.kinopoiskmyversion.profile.tabfragment.SeeLaterFragment
+import com.example.kinopoiskmyversion.profile.tabfragment.SeenFragment
 
-class PagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) { //поч тут используется fragment activity
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+class PagerAdapter(fragment: Fragment) :
+    FragmentStateAdapter(fragment) { //поч тут используется fragment activity
+    override fun getItemCount() = 2 // хардкод тк фиксированное число
 
     override fun createFragment(position: Int): Fragment {
-        TODO("Not yet implemented")
+        return if (position==0)
+            SeeLaterFragment()
+         else SeenFragment()
     }
 
 }
