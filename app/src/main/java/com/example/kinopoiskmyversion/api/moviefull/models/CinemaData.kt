@@ -12,7 +12,7 @@ data class CinemaData(
     val movieLength: Int?,
     val genres:List<Genres>,
     val type:String,
-    val alternativeName:String,
+    val alternativeName:String?,
     val seasonsInfo:List<Season>?,
     val releaseYears:List<Years>?,
     val poster: Poster

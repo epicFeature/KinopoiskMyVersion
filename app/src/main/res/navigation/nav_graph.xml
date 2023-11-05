@@ -41,4 +41,22 @@
             android:id="@+id/action_profileFragment_to_movieBasicFragment"
             app:destination="@id/movieBasicFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/seeLaterFragment"
+        android:name="com.example.kinopoiskmyversion.profile.tabfragment.SeeLaterFragment"
+        android:label="fragment_see_later"
+        tools:layout="@layout/fragment_see_later" >
+        <action
+            android:id="@+id/action_seeLaterFragment_to_movieBasicFragment"
+            app:destination="@id/movieBasicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seenFragment"
+        android:name="com.example.kinopoiskmyversion.profile.tabfragment.SeenFragment"
+        android:label="fragment_seen"
+        tools:layout="@layout/fragment_seen" >
+        <action
+            android:id="@+id/action_seenFragment_to_movieBasicFragment"
+            app:destination="@id/movieBasicFragment" />
+    </fragment>
 </navigation>
