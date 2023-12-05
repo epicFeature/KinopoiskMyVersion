@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion.movieinfo
+package com.example.kinopoiskmyversion.ui.movieinfo
 
 import android.annotation.SuppressLint
 import android.os.Bundle

@@ -16,7 +16,7 @@ object Dependencies {
         Room.databaseBuilder(
             applicationContext, AppDatabase::class.java, "database.db"
         )
-            .createFromAsset("example_cinema_data.db") // этот метод заполняет базу заранее заготовленными значениями
+            //createFromAsset("example_cinema_data.db") // этот метод заполняет базу заранее заготовленными значениями
             .build()
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".profile.tabfragment.SeenFragment">
+    tools:context=".ui.profile.tabfragment.SeenFragment">
 
     <ScrollView
         android:layout_width="match_parent"

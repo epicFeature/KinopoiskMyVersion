@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieBasicFragment"
-        android:name="com.example.kinopoiskmyversion.movieinfo.MovieBasicFragment"
+        android:name="com.example.kinopoiskmyversion.ui.movieinfo.MovieBasicFragment"
         android:label="fragment_movie_basic"
         tools:layout="@layout/fragment_movie_basic" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.kinopoiskmyversion.profile.ProfileFragment"
+        android:name="com.example.kinopoiskmyversion.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/seeLaterFragment"
-        android:name="com.example.kinopoiskmyversion.profile.tabfragment.SeeLaterFragment"
+        android:name="com.example.kinopoiskmyversion.ui.profile.tabfragment.SeeLaterFragment"
         android:label="fragment_see_later"
         tools:layout="@layout/fragment_see_later" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/seenFragment"
-        android:name="com.example.kinopoiskmyversion.profile.tabfragment.SeenFragment"
+        android:name="com.example.kinopoiskmyversion.ui.profile.tabfragment.SeenFragment"
         android:label="fragment_seen"
         tools:layout="@layout/fragment_seen" >
         <action

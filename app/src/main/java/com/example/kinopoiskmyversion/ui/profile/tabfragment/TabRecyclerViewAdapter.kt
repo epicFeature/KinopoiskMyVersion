@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion.profile.tabfragment
+package com.example.kinopoiskmyversion.ui.profile.tabfragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

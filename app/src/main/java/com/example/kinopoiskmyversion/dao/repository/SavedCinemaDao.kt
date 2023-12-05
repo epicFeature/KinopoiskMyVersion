@@ -5,12 +5,12 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.example.kinopoiskmyversion.dao.SavedCinemaInfoTuple
-import com.example.kinopoiskmyversion.dao.model.SavedCinemaEntity
+import com.example.kinopoiskmyversion.dao.model.SavedCinemaDbEntity
 
 @Dao
 interface SavedCinemaDao {
-    @Insert(entity = SavedCinemaEntity::class)
-    fun insertNewCinemaData(savedCinema: SavedCinemaEntity)
+    @Insert(entity = SavedCinemaDbEntity::class)
+    fun insertNewSavedCinemaData(savedCinema: SavedCinemaDbEntity)
 
     @Query(
         "SELECT movie_id, name_ru, name_eng, year, release_years, " +
@@ -18,19 +18,21 @@ interface SavedCinemaDao {
                 "poster, saved_see_later, saved_seen " +
                 "FROM saved_cinema_data"
     )
-    fun getAllStatisticData(): List<SavedCinemaInfoTuple>
+    fun getAllSavedCinemaData(): List<SavedCinemaInfoTuple>
 
-    @Query("DELETE FROM saved_cinema_data " +
-            "WHERE movie_id = :cinemaDataId")
-    fun deleteStatisticDataById(cinemaDataId: Long)
-
-    @Update(
-        entity = SavedCinemaEntity::class
+    @Query(
+        "DELETE FROM saved_cinema_data " +
+                "WHERE movie_id = :cinemaDataId"
     )
-    fun changeSeeLaterState(seeLaterState:Boolean) // не уверена, нужно проверить
+    fun deleteSavedCinemaDataById(cinemaDataId: Long)
 
     @Update(
-        entity = SavedCinemaEntity::class
+        entity = SavedCinemaDbEntity::class
+    )
+    fun changeSeeLaterState(seeLaterState: Boolean) // не уверена, нужно проверить
+
+    @Update(
+        entity = SavedCinemaDbEntity::class
     )
     fun changeSeenState(seenState: Boolean)// то же самое
 }

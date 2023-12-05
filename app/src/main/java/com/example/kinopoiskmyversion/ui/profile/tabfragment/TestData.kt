@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion.profile.tabfragment
+package com.example.kinopoiskmyversion.ui.profile.tabfragment
 
 import com.example.kinopoiskmyversion.api.moviefull.models.CinemaData
 

@@ -5,8 +5,8 @@ import androidx.core.view.isVisible
 import com.example.kinopoiskmyversion.api.common.RetrofitInstance
 import com.example.kinopoiskmyversion.api.moviefull.models.CinemaData
 import com.example.kinopoiskmyversion.databinding.FragmentMovieBasicBinding
-import com.example.kinopoiskmyversion.movieinfo.CinemaDataMapper
-import com.example.kinopoiskmyversion.movieinfo.MovieBasicFragment
+import com.example.kinopoiskmyversion.ui.movieinfo.CinemaDataMapper
+import com.example.kinopoiskmyversion.ui.movieinfo.MovieBasicFragment
 import com.example.kinopoiskmyversion.utils.toEnum
 import retrofit2.Call
 import retrofit2.Callback

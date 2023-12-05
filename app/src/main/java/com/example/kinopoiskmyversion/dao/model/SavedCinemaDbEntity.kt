@@ -13,7 +13,7 @@ import com.example.kinopoiskmyversion.api.moviefull.models.Years
     tableName = "saved_cinema_data",
     indices = [Index("movie_id")],
 )
-data class SavedCinemaEntity(
+data class SavedCinemaDbEntity(
     @PrimaryKey
     @ColumnInfo(name = "movie_id") val movieId: Long,
     @ColumnInfo(name = "name_ru") val nameRu: String?,

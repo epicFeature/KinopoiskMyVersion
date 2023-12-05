@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion.movieinfo
+package com.example.kinopoiskmyversion.ui.movieinfo
 
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide

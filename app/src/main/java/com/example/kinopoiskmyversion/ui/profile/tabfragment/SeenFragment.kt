@@ -1,4 +1,4 @@
-package com.example.kinopoiskmyversion.profile.tabfragment
+package com.example.kinopoiskmyversion.ui.profile.tabfragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,20 +9,20 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kinopoiskmyversion.R
 import com.example.kinopoiskmyversion.databinding.FragmentSeeLaterBinding
+import com.example.kinopoiskmyversion.databinding.FragmentSeenBinding
 import com.example.kinopoiskmyversion.utils.KEY_MOVIE_ID
 
-
-class SeeLaterFragment : Fragment() {
+class SeenFragment : Fragment() {
     private lateinit var adapter: TabRecyclerViewAdapter
 
-    private var _binding: FragmentSeeLaterBinding? = null
+    private var _binding: FragmentSeenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSeeLaterBinding.inflate(inflater, container, false)
+        _binding = FragmentSeenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -31,10 +31,10 @@ class SeeLaterFragment : Fragment() {
 
         //services
         adapter = TabRecyclerViewAdapter{onClick(it)} // как компилятор понял, что it то cinema data
-        binding.seeLaterRecyclerView.layoutManager = LinearLayoutManager(this.requireContext().applicationContext)
-        binding.seeLaterRecyclerView.adapter = adapter
+        binding.seenRecyclerView.layoutManager = LinearLayoutManager(this.requireContext().applicationContext)
+        binding.seenRecyclerView.adapter = adapter
 
-        adapter.data = TestData.seeLaterList
+        adapter.data = TestData.seenList
     }
 
     private fun onClick(savedCinemaData: SavedCinemaData){
